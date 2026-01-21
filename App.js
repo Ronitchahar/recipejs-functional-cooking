@@ -1,9 +1,10 @@
 // ============================================
-// RECIPE APP - PART 3: EXPANDABLE CARDS
+// RECIPE APP - COMPLETE VERSION
 // Wrap entire app in IIFE for encapsulation
 // ============================================
 
 const RecipeApp = (() => {
+    'use strict';
 
     // ============================================
     // PRIVATE: DATA
@@ -28,15 +29,8 @@ const RecipeApp = (() => {
             steps: [
                 "Bring a large pot of salted water to boil",
                 "Add pasta and cook according to package directions",
-                {
-                    text: "Prepare the sauce",
-                    substeps: [
-                        "Heat olive oil in a pan",
-                        "Add minced garlic and sauté until fragrant",
-                        "Add crushed tomatoes",
-                        "Simmer for 10 minutes"
-                    ]
-                },
+                "Heat olive oil in a pan and add minced garlic",
+                "Add crushed tomatoes and simmer for 10 minutes",
                 "Drain pasta and add to sauce",
                 "Top with fresh mozzarella and basil",
                 "Serve immediately"
@@ -86,14 +80,8 @@ const RecipeApp = (() => {
                 "Salt to taste"
             ],
             steps: [
-                {
-                    text: "Prepare ingredients",
-                    substeps: [
-                        "Cut chicken into 1-inch cubes",
-                        "Slice onions",
-                        "Mince garlic and ginger"
-                    ]
-                },
+                "Cut chicken into 1-inch cubes",
+                "Slice onions and mince garlic and ginger",
                 "Heat oil in a large pot",
                 "Sauté onions until golden",
                 "Add garlic and ginger, cook for 1 minute",
@@ -128,14 +116,8 @@ const RecipeApp = (() => {
                 "Add diced onions and cook until golden",
                 "Add garlic and ginger paste, cook for 2 minutes",
                 "Add crushed tomatoes and simmer for 15 minutes",
-                {
-                    text: "Create the curry base",
-                    substeps: [
-                        "Blend the tomato mixture until smooth",
-                        "Return to pan",
-                        "Add garam masala and salt"
-                    ]
-                },
+                "Blend the tomato mixture until smooth",
+                "Return to pan and add garam masala and salt",
                 "Add paneer cubes gently",
                 "Pour cream and simmer for 10 minutes",
                 "Garnish with cilantro and serve hot"
@@ -162,32 +144,17 @@ const RecipeApp = (() => {
             ],
             steps: [
                 "Preheat oven to 190°C",
-                {
-                    text: "Prepare the meat sauce",
-                    substeps: [
-                        "Cook ground beef in a pan",
-                        "Add diced onions and garlic",
-                        "Add tomato sauce and simmer for 20 minutes",
-                        "Season with salt and pepper"
-                    ]
-                },
-                {
-                    text: "Prepare the cheese mixture",
-                    substeps: [
-                        "Mix ricotta, egg, and parmesan",
-                        "Add mozzarella and season"
-                    ]
-                },
-                "Cook lasagna noodles according to package directions, drain and set aside",
-                {
-                    text: "Assemble the lasagna",
-                    substeps: [
-                        "Spread thin layer of meat sauce on bottom of baking dish",
-                        "Layer noodles, then cheese mixture",
-                        "Repeat layers, ending with meat sauce",
-                        "Top with remaining mozzarella"
-                    ]
-                },
+                "Cook ground beef in a pan",
+                "Add diced onions and garlic",
+                "Add tomato sauce and simmer for 20 minutes",
+                "Season with salt and pepper",
+                "Mix ricotta, egg, and parmesan",
+                "Add mozzarella and season",
+                "Cook lasagna noodles according to package directions",
+                "Spread thin layer of meat sauce on bottom of baking dish",
+                "Layer noodles, then cheese mixture",
+                "Repeat layers, ending with meat sauce",
+                "Top with remaining mozzarella",
                 "Bake for 30-35 minutes until bubbly",
                 "Let rest for 10 minutes before serving"
             ]
@@ -213,26 +180,16 @@ const RecipeApp = (() => {
             ],
             steps: [
                 "Preheat oven to 160°C",
-                {
-                    text: "Sear the beef",
-                    substeps: [
-                        "Heat olive oil in a large pot",
-                        "Brown beef in batches on all sides",
-                        "Remove and set aside"
-                    ]
-                },
+                "Heat olive oil in a large pot",
+                "Brown beef in batches on all sides",
+                "Remove and set aside",
                 "Sauté pearl onions, carrots, and garlic in the pot",
                 "Add tomato paste and cook for 2 minutes",
                 "Deglaze with red wine, scraping up browned bits",
                 "Add beef broth, herbs, and return beef to pot",
-                {
-                    text: "Cook in oven",
-                    substeps: [
-                        "Cover and place in oven",
-                        "Cook for 2.5-3 hours until beef is tender",
-                        "Add mushrooms during last 30 minutes"
-                    ]
-                },
+                "Cover and place in oven",
+                "Cook for 2.5-3 hours until beef is tender",
+                "Add mushrooms during last 30 minutes",
                 "Adjust seasoning and serve"
             ]
         },
@@ -259,14 +216,8 @@ const RecipeApp = (() => {
                 "Dice cucumber",
                 "Thinly slice red onion",
                 "Crumble feta cheese",
-                {
-                    text: "Make the dressing",
-                    substeps: [
-                        "Mix olive oil and red wine vinegar",
-                        "Add oregano, salt, and pepper",
-                        "Whisk well"
-                    ]
-                },
+                "Mix olive oil and red wine vinegar",
+                "Add oregano, salt, and pepper",
                 "Combine all vegetables in a bowl",
                 "Add olives and feta",
                 "Drizzle with dressing and toss gently",
@@ -297,23 +248,13 @@ const RecipeApp = (() => {
                 "Heat vegetable broth in a separate pot (keep warm)",
                 "Heat olive oil in a large pan",
                 "Sauté mushrooms until golden, set aside",
-                {
-                    text: "Cook the risotto base",
-                    substeps: [
-                        "Add diced onion and garlic to pan",
-                        "Cook until soft",
-                        "Add arborio rice and stir for 1 minute"
-                    ]
-                },
+                "Add diced onion and garlic to pan",
+                "Cook until soft",
+                "Add arborio rice and stir for 1 minute",
                 "Deglaze with white wine",
-                {
-                    text: "Add broth gradually",
-                    substeps: [
-                        "Add broth one ladle at a time",
-                        "Stir frequently for 18-20 minutes",
-                        "Rice should be creamy but still have bite"
-                    ]
-                },
+                "Add broth one ladle at a time",
+                "Stir frequently for 18-20 minutes",
+                "Rice should be creamy but still have bite",
                 "Return mushrooms to pan",
                 "Stir in butter and grated parmesan",
                 "Season with salt and pepper",
@@ -327,6 +268,9 @@ const RecipeApp = (() => {
     // ============================================
     let currentFilter = 'all';
     let currentSort = 'none';
+    let searchQuery = '';
+    let favorites = JSON.parse(localStorage.getItem('recipeFavorites')) || [];
+    let debounceTimer = null;
 
     // ============================================
     // PRIVATE: DOM REFERENCES
@@ -334,49 +278,24 @@ const RecipeApp = (() => {
     const recipeContainer = document.querySelector("#recipe-container");
     const filterButtons = document.querySelectorAll('.filter-btn');
     const sortButtons = document.querySelectorAll('.sort-btn');
+    const searchInput = document.querySelector('#search-input');
+    const clearSearchBtn = document.querySelector('.clear-btn');
 
     // ============================================
-    // PRIVATE: HELPER FUNCTIONS - RECURSION
+    // PRIVATE: HELPER FUNCTIONS
     // ============================================
 
-    // Recursive function to render steps (handles nesting)
-    const renderSteps = (steps, level = 0) => {
-        // Determine the CSS class based on nesting level
-        const listClass = level === 0 ? 'steps-list' : 'substeps-list';
-        
-        let html = `<ol class="${listClass}">`;
-        
-        steps.forEach(step => {
-            // Check if step is a string or object
-            if (typeof step === 'string') {
-                // Simple step - just add as list item
-                html += `<li>${step}</li>`;
-            } else {
-                // Nested step - has text and substeps
-                html += `<li>`;
-                html += step.text;  // Main step text
-                
-                // Recursively call renderSteps for substeps
-                if (step.substeps && step.substeps.length > 0) {
-                    // RECURSIVE CALL - this is the key!
-                    html += renderSteps(step.substeps, level + 1);
-                }
-                
-                html += `</li>`;
-            }
-        });
-        
-        html += `</ol>`;
-        return html;
-    };
-
-    // Create complete steps HTML for a recipe
-    const createStepsHTML = (steps) => {
+    const renderSteps = (steps) => {
         if (!steps || steps.length === 0) {
             return '<p>No steps available</p>';
         }
         
-        return renderSteps(steps);
+        let html = '<ol class="steps-list">';
+        steps.forEach((step, index) => {
+            html += `<li>${step}</li>`;
+        });
+        html += '</ol>';
+        return html;
     };
 
     // ============================================
@@ -384,8 +303,14 @@ const RecipeApp = (() => {
     // ============================================
 
     const createRecipeCard = (recipe) => {
+        const isFavorited = favorites.includes(recipe.id);
+        const heartIcon = isFavorited ? '❤️' : '🤍';
+        
         return `
             <div class="recipe-card" data-id="${recipe.id}">
+                <button class="favorite-btn" data-recipe-id="${recipe.id}">
+                    ${heartIcon}
+                </button>
                 <h3>${recipe.title}</h3>
                 <div class="recipe-meta">
                     <span>⏱️ ${recipe.time} min</span>
@@ -393,7 +318,6 @@ const RecipeApp = (() => {
                 </div>
                 <p>${recipe.description}</p>
                 
-                <!-- Toggle Buttons -->
                 <div class="card-actions">
                     <button class="toggle-btn" data-recipe-id="${recipe.id}" data-toggle="steps">
                         📋 Show Steps
@@ -403,7 +327,6 @@ const RecipeApp = (() => {
                     </button>
                 </div>
                 
-                <!-- Ingredients Section (hidden by default) -->
                 <div class="ingredients-container" data-recipe-id="${recipe.id}">
                     <h4>Ingredients:</h4>
                     <ul>
@@ -411,16 +334,20 @@ const RecipeApp = (() => {
                     </ul>
                 </div>
                 
-                <!-- Steps Section (hidden by default) -->
                 <div class="steps-container" data-recipe-id="${recipe.id}">
                     <h4>Cooking Steps:</h4>
-                    ${createStepsHTML(recipe.steps)}
+                    ${renderSteps(recipe.steps)}
                 </div>
             </div>
         `;
     };
 
     const renderRecipes = (recipesArray) => {
+        if (!recipesArray || recipesArray.length === 0) {
+            recipeContainer.innerHTML = '<p class="empty-state">No recipes found 🍽️</p>';
+            return;
+        }
+
         const recipesHTML = recipesArray
             .map(recipe => createRecipeCard(recipe))
             .join("");
@@ -440,8 +367,30 @@ const RecipeApp = (() => {
         return recipes.filter(recipe => recipe.time <= maxTime);
     };
 
+    const filterBySearch = (recipes, query) => {
+        if (!query || query.trim() === '') {
+            return recipes;
+        }
+
+        const lowerQuery = query.toLowerCase().trim();
+
+        return recipes.filter(recipe => {
+            const titleMatch = recipe.title.toLowerCase().includes(lowerQuery);
+            const ingredientMatch = recipe.ingredients.some(ingredient =>
+                ingredient.toLowerCase().includes(lowerQuery)
+            );
+            const descriptionMatch = recipe.description.toLowerCase().includes(lowerQuery);
+
+            return titleMatch || ingredientMatch || descriptionMatch;
+        });
+    };
+
+    const filterFavorites = (recipes) => {
+        return recipes.filter(recipe => favorites.includes(recipe.id));
+    };
+
     const applyFilter = (recipes, filterType) => {
-        switch(filterType) {
+        switch (filterType) {
             case 'easy':
                 return filterByDifficulty(recipes, 'easy');
             case 'medium':
@@ -450,6 +399,8 @@ const RecipeApp = (() => {
                 return filterByDifficulty(recipes, 'hard');
             case 'quick':
                 return filterByTime(recipes, 30);
+            case 'favorites':
+                return filterFavorites(recipes);
             case 'all':
             default:
                 return recipes;
@@ -469,7 +420,7 @@ const RecipeApp = (() => {
     };
 
     const applySort = (recipes, sortType) => {
-        switch(sortType) {
+        switch (sortType) {
             case 'name':
                 return sortByName(recipes);
             case 'time':
@@ -503,8 +454,17 @@ const RecipeApp = (() => {
     };
 
     const updateDisplay = () => {
-        const filteredRecipes = applyFilter(recipes, currentFilter);
+        let filteredRecipes = recipes;
+        
+        // Apply search first
+        filteredRecipes = filterBySearch(filteredRecipes, searchQuery);
+        
+        // Apply filter
+        filteredRecipes = applyFilter(filteredRecipes, currentFilter);
+        
+        // Apply sort
         const sortedRecipes = applySort(filteredRecipes, currentSort);
+        
         renderRecipes(sortedRecipes);
         updateActiveButtons();
     };
@@ -515,36 +475,29 @@ const RecipeApp = (() => {
 
     const handleFilterClick = (event) => {
         currentFilter = event.target.dataset.filter;
-        updateActiveButtons();
         updateDisplay();
     };
 
     const handleSortClick = (event) => {
         currentSort = event.target.dataset.sort;
-        updateActiveButtons();
         updateDisplay();
     };
 
-    // Handle toggle button clicks using event delegation
     const handleToggleClick = (event) => {
-        // Check if clicked element is a toggle button
         if (!event.target.classList.contains('toggle-btn')) {
-            return;  // Not a toggle button, ignore
+            return;
         }
         
         const button = event.target;
         const recipeId = button.dataset.recipeId;
-        const toggleType = button.dataset.toggle;  // "steps" or "ingredients"
+        const toggleType = button.dataset.toggle;
         
-        // Find the corresponding container
         const containerClass = toggleType === 'steps' ? 'steps-container' : 'ingredients-container';
         const container = document.querySelector(`.${containerClass}[data-recipe-id="${recipeId}"]`);
         
-        // Toggle visibility
         if (container) {
             container.classList.toggle('visible');
             
-            // Update button text
             const isVisible = container.classList.contains('visible');
             if (toggleType === 'steps') {
                 button.textContent = isVisible ? '📋 Hide Steps' : '📋 Show Steps';
@@ -554,25 +507,86 @@ const RecipeApp = (() => {
         }
     };
 
+    const handleSearchInput = (event) => {
+        const query = event.target.value;
+
+        if (clearSearchBtn) {
+            clearSearchBtn.style.display = query ? 'block' : 'none';
+        }
+
+        clearTimeout(debounceTimer);
+
+        debounceTimer = setTimeout(() => {
+            searchQuery = query;
+            updateDisplay();
+        }, 300);
+    };
+
+    const handleClearSearch = () => {
+        if (searchInput) {
+            searchInput.value = '';
+        }
+
+        searchQuery = '';
+
+        if (clearSearchBtn) {
+            clearSearchBtn.style.display = 'none';
+        }
+
+        updateDisplay();
+    };
+
+    const saveFavorites = () => {
+        localStorage.setItem('recipeFavorites', JSON.stringify(favorites));
+    };
+
+    const toggleFavorite = (recipeId) => {
+        const id = parseInt(recipeId, 10);
+
+        if (favorites.includes(id)) {
+            favorites = favorites.filter(favId => favId !== id);
+        } else {
+            favorites.push(id);
+        }
+
+        saveFavorites();
+        updateDisplay();
+    };
+
+    const handleFavoriteClick = (event) => {
+        if (!event.target.classList.contains('favorite-btn')) {
+            return;
+        }
+
+        const recipeId = event.target.dataset.recipeId;
+        toggleFavorite(recipeId);
+    };
+
     // ============================================
     // PRIVATE: EVENT LISTENER SETUP
     // ============================================
 
     const setupEventListeners = () => {
-        // Filter buttons
         filterButtons.forEach(btn => {
             btn.addEventListener('click', handleFilterClick);
         });
         
-        // Sort buttons
         sortButtons.forEach(btn => {
             btn.addEventListener('click', handleSortClick);
         });
         
-        // Event delegation for toggle buttons
         recipeContainer.addEventListener('click', handleToggleClick);
+        recipeContainer.addEventListener('click', handleFavoriteClick);
         
-        console.log('Event listeners attached!');
+        if (searchInput) {
+            searchInput.addEventListener('input', handleSearchInput);
+        }
+        
+        if (clearSearchBtn) {
+            clearSearchBtn.addEventListener('click', handleClearSearch);
+        }
+        
+        console.log('✅ Event listeners attached!');
     };
 
     // ============================================
@@ -580,10 +594,12 @@ const RecipeApp = (() => {
     // ============================================
 
     const init = () => {
-        console.log('RecipeApp initializing...');
+        console.log('🍳 RecipeApp initializing...');
         setupEventListeners();
         updateDisplay();
-        console.log('RecipeApp ready!');
+        console.log('✅ RecipeApp ready!');
+        console.log(`📊 ${recipes.length} recipes loaded`);
+        console.log(`❤️ ${favorites.length} favorites saved`);
     };
 
     // ============================================
